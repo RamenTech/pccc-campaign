@@ -322,6 +322,18 @@
     .del-card.no-link:hover { background: #1a1a1a; }
     .del-card.no-link::before { display: none; }
 
+    /* ── VIDEO EMBED ── */
+    .video-embed {
+      margin-top: 1rem;
+      aspect-ratio: 16/9;
+    }
+
+    .video-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
     /* ── ABOUT PCCC ── */
     .about { background: #0e0e0e; }
 
@@ -369,51 +381,6 @@
       color: var(--muted);
       margin-top: 0.4rem;
       line-height: 1.4;
-    }
-
-    /* ── FOUNDATION DOCS ── */
-    .foundation { background: var(--rice); }
-    .foundation .section-title { color: var(--ink); }
-    .foundation .section-label { color: var(--terra); }
-    .foundation .section-divider { background: var(--terra); }
-
-    .doc-list {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
-
-    .doc-card {
-      background: var(--ink);
-      padding: 1.5rem;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      transition: opacity 0.2s;
-    }
-
-    .doc-card:hover { opacity: 0.8; }
-
-    .doc-icon {
-      font-size: 1.4rem;
-      flex-shrink: 0;
-    }
-
-    .doc-info {}
-
-    .doc-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 0.95rem;
-      color: var(--rice);
-      margin-bottom: 0.2rem;
-    }
-
-    .doc-type {
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
-      color: var(--gold);
-      text-transform: uppercase;
     }
 
     /* ── FOOTER ── */
@@ -606,17 +573,23 @@
           <div class="del-title zh">信息图：PCCC数据</div>
           <div class="del-desc en">Single-page visual presenting PCCC's scope, impact, and year-round activity — countering the perception that PCCC is a two-event organization.</div>
           <div class="del-desc zh">展示PCCC范围、影响和全年活动的单页视觉图表。</div>
-          <span class="del-tag">PDF</span>
+          <span class="del-tag">PNG</span>
         </a>
 
-        <a href="video-essay.mp4" class="del-card fade-in">
+        <!-- VIDEO ESSAY — update YOUR_VIDEO_ESSAY_ID once uploaded -->
+        <div class="del-card no-link fade-in">
           <div class="del-num">04 · VIDEO ESSAY</div>
           <div class="del-title en">Pittsburgh Chinese Cultural Festival Promo</div>
           <div class="del-title zh">视频：文化节宣传片</div>
           <div class="del-desc en">60–90 second festival promo featuring food stalls, performances, and a clear call to attend.</div>
           <div class="del-desc zh">60-90秒的节日宣传片，展示美食摊位和表演。</div>
-          <span class="del-tag">MP4</span>
-        </a>
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ESSAY_ID"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
 
         <a href="social-media.zip" class="del-card fade-in">
           <div class="del-num">05 · SOCIAL MEDIA</div>
@@ -627,14 +600,20 @@
           <span class="del-tag">JPG / MP4</span>
         </a>
 
-        <a href="pitch.mp4" class="del-card fade-in">
+        <!-- PITCH PRESENTATION — embedded YouTube -->
+        <div class="del-card no-link fade-in">
           <div class="del-num">06 · PITCH PRESENTATION</div>
           <div class="del-title en">Campaign Pitch to PCCC</div>
           <div class="del-title zh">宣传：向PCCC的活动提案</div>
           <div class="del-desc en">Recorded 5–7 minute Zoom presentation pitching the full campaign to PCCC as a client.</div>
           <div class="del-desc zh">向PCCC客户介绍完整活动的5-7分钟录制演示。</div>
-          <span class="del-tag">VIDEO</span>
-        </a>
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/IoYP_Dg3EyU"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
 
         <a href="Zheng_Raymond_Visual_Audit_and_Moodboard.pdf" class="del-card fade-in">
           <div class="del-num">07 · VISUAL AUDIT & MOODBOARD</div>
